@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="stylesheet" href="/css/styles.min.css" />
+		<link rel="icon" href="/img/favicon.png" />
 		<!-- <script src="./js/app.js" defer></script> -->
-		<title>Chat App</title>
+		<title>Chat App - Rohan Ganguly</title>
 		<script src="/socket.io/socket.io.js" defer></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"
@@ -22,22 +23,22 @@
 		<script src="/js/chat.js" defer></script>
 	</head>
 	<body>
-		<h1>Chat App</h1>
-		<div id="messages"></div>
-		<form action="" name="input-form" id="message-form" placeholder="Message">
-			<input type="text" name=message" id="message" />
-			<button name="send-msssage" id="send-message">Send</button>
-		</form>
-		<button name="send-location" id="send-location">Send Location</button>
-		<script id="message-template" type="text/html">
-			<div>
-			    <p>{{createdAt}} - {{message}}</p>
-			    </div>
-		</script>
-		<script id="location-template" type="text/html">
-			<div>
-			    <p>{{createdAt}}<a href={{url}} target="_blank"> - My current location</a></p>
-			    </div>
-		</script>
+		<div class="centered-form">
+			<div class="centered-form__box">
+				<h1>Join</h1>
+				<form action="/chat.html">
+					<label for="">Display Name</label>
+					<input
+						type="text"
+						name="username"
+						placeholder="Display name"
+						required
+					/>
+					<label for="">Room</label>
+					<input type="text" name="room" placeholder="Room" required />
+					<button>Join</button>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
